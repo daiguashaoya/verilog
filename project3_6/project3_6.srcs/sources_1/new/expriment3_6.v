@@ -165,6 +165,6 @@ _7Seg_Driver_Selector selector (
 );
 
 // 最终段码输出（DP点默认关闭）
-assign SEG = seg_decoded | 8'b11111111; // 保留DP点控制位
+assign SEG = seg_decoded;
 
 endmodule

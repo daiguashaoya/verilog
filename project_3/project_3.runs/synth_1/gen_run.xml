@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1744183203">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1744199090">
   <File Type="PA-TCL" Name="_7Seg_Driver_Choice.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="_7Seg_Driver_Choice_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="_7Seg_Driver_Choice_reports.tcl"/>

@@ -67,7 +67,7 @@ set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 3
   open_checkpoint dynamic_scan_routed.dcp
-  set_property webtalk.parent_dir D:/verilog/verilog/project3_6/project3_6.cache/wt [current_project]
+  set_property webtalk.parent_dir D:/verilog/project3_6/project3_6.cache/wt [current_project]
   catch { write_mem_info -force dynamic_scan.mmi }
   write_bitstream -force dynamic_scan.bit 
   catch {write_debug_probes -quiet -force dynamic_scan}

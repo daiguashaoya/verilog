@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Wed Apr  9 15:22:53 2025
-| Host             : VOIPC2 running 64-bit major release  (build 9200)
+| Date             : Wed Apr  9 19:46:19 2025
+| Host             : VOIPC71 running 64-bit major release  (build 9200)
 | Command          : report_power -file _7Seg_Driver_Choice_power_routed.rpt -pb _7Seg_Driver_Choice_power_summary_routed.pb -rpx _7Seg_Driver_Choice_power_routed.rpx
 | Design           : _7Seg_Driver_Choice
 | Device           : xc7a100tcsg324-1

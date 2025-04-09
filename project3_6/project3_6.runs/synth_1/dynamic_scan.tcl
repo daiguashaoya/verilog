@@ -22,13 +22,13 @@ create_project -in_memory -part xc7a100tcsg324-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir D:/verilog/verilog/project3_6/project3_6.cache/wt [current_project]
-set_property parent.project_path D:/verilog/verilog/project3_6/project3_6.xpr [current_project]
+set_property webtalk.parent_dir D:/verilog/project3_6/project3_6.cache/wt [current_project]
+set_property parent.project_path D:/verilog/project3_6/project3_6.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo d:/verilog/verilog/project3_6/project3_6.cache/ip [current_project]
+set_property ip_output_repo d:/verilog/project3_6/project3_6.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib D:/verilog/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v
+read_verilog -library xil_defaultlib D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -37,8 +37,8 @@ read_verilog -library xil_defaultlib D:/verilog/verilog/project3_6/project3_6.sr
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc
-set_property used_in_implementation false [get_files D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc]
+read_xdc D:/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc
+set_property used_in_implementation false [get_files D:/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
