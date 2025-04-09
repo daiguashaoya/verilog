@@ -1,32 +1,15 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 2025/03/28 21:41:12
-// Design Name: 
-// Module Name: project_3
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
-
+//////////////////////////////////////////////////////////////////////////////////
+// 7段数码管译码模块（保持不变）
+//////////////////////////////////////////////////////////////////////////////////
 module _7Seg_Driver_Decode(
-    input [3:0] SW,   // 4位拨动开关
-    output reg [7:0] SEG  // 7段数码管驱动，低电平有效
+    input [3:0] SW,        // 4位输入
+    output reg [7:0] SEG   // 7段译码输出（reg类型）
 );
 
 always @(*) begin
-    case (SW[3:0])
+    case (SW)
         4'b0000: SEG = 8'b11000000; // 0
         4'b0001: SEG = 8'b11111001; // 1
         4'b0010: SEG = 8'b10100100; // 2
@@ -43,49 +26,48 @@ always @(*) begin
         4'b1101: SEG = 8'b10100001; // d
         4'b1110: SEG = 8'b10000110; // E
         4'b1111: SEG = 8'b10001110; // F
-        default: SEG = 8'b11111111; // 默认全灭
+        default: SEG = 8'b11111111; // 全灭
     endcase
-    end
+end
 
 endmodule
 
+//////////////////////////////////////////////////////////////////////////////////
+// 数码管选择模块（关键修改）
+//////////////////////////////////////////////////////////////////////////////////
 module _7Seg_Driver_Selector(
-    input [2:0] SW,    // 3位拨动开关，用于选择数码管
-    output reg [7:0] AN  // 7段数码管片选信号，低电平有效
+    input [2:0] SW,        // 3位选择信号
+    output reg [7:0] AN    // 片选信号输出（reg类型）
 );
 
-    always @(*) begin
-           assign AN = 8'b11111111 - (8'b00000001 << SW[15:13]);
-    end
+always @(*) begin
+    // 优化后的片选逻辑
+    AN = ~(8'b00000001 << SW);  // 等价于原式 8'b11111111 - (8'b00000001 << SW)
+end
 
 endmodule
 
+//////////////////////////////////////////////////////////////////////////////////
+// 顶层模块（关键修改）
+//////////////////////////////////////////////////////////////////////////////////
 module _7Seg_Driver_Choice(
-    input [15:0] SW,   // 16位拨动开关
-    output reg [7:0] SEG,  // 7段数码管驱动，低电平有效
-    output [7:0] AN,   // 7段数码管片选信号，低电平有效
-    output [15:0] LED  // 16位LED显示
+    input [15:0] SW,       // 16位拨码开关
+    output [7:0] SEG,      // 改为wire类型（重要！）
+    output [7:0] AN,       // 保持wire类型
+    output [15:0] LED      // LED直连
 );
 
-    // 内部信号
-    reg [7:0] decoded_SEG;
-    reg [7:0] decoded_AN;
+// 直接实例化连接（移除冗余的中间信号）
+_7Seg_Driver_Decode decoder (
+    .SW(SW[3:0]),         // 低4位控制显示内容
+    .SEG(SEG)             // 直接连接顶层输出
+);
 
-    // 调用译码显示模块
-    _7Seg_Driver_Decode decoder (
-        .SW(SW[3:0]),
-        .SEG(decoded_SEG)
-    );
+_7Seg_Driver_Selector selector (
+    .SW(SW[15:13]),       // 高3位控制片选
+    .AN(AN)               // 直接连接顶层输出
+);
 
-    // 调用译码选择模块
-    _7Seg_Driver_Selector selector (
-        .SW(SW[15:13]),
-        .AN(decoded_AN)
-    );
-
-    // 将译码选择模块的输出连接到顶层模块的输出
-    assign SEG = decoded_SEG;
-    assign AN = decoded_AN;
-    assign LED = SW;
+assign LED = SW;          // LED直连开关状态
 
 endmodule
