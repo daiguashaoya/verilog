@@ -1,0 +1,621 @@
+
+*** Running vivado
+    with args -log dynamic_scan.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source dynamic_scan.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source dynamic_scan.tcl -notrace
+Command: synth_design -top dynamic_scan -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 14616 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 930.258 ; gain = 234.664
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'dynamic_scan' [D:/verilog/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:123]
+INFO: [Synth 8-6157] synthesizing module 'divider' [D:/verilog/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:34]
+	Parameter N bound to: 50000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'divider' (1#1) [D:/verilog/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:34]
+INFO: [Synth 8-6157] synthesizing module 'counter' [D:/verilog/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'counter' (2#1) [D:/verilog/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:22]
+INFO: [Synth 8-6157] synthesizing module 'rom8x4' [D:/verilog/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'rom8x4' (3#1) [D:/verilog/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:57]
+INFO: [Synth 8-6157] synthesizing module '_7Seg_Driver_Decode' [D:/verilog/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:82]
+INFO: [Synth 8-226] default block is never used [D:/verilog/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:88]
+INFO: [Synth 8-6155] done synthesizing module '_7Seg_Driver_Decode' (4#1) [D:/verilog/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:82]
+INFO: [Synth 8-6157] synthesizing module '_7Seg_Driver_Selector' [D:/verilog/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:111]
+INFO: [Synth 8-6155] done synthesizing module '_7Seg_Driver_Selector' (5#1) [D:/verilog/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'dynamic_scan' (6#1) [D:/verilog/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:123]
+WARNING: [Synth 8-3917] design dynamic_scan has port SEG[7] driven by constant 1
+WARNING: [Synth 8-3917] design dynamic_scan has port SEG[6] driven by constant 1
+WARNING: [Synth 8-3917] design dynamic_scan has port SEG[5] driven by constant 1
+WARNING: [Synth 8-3917] design dynamic_scan has port SEG[4] driven by constant 1
+WARNING: [Synth 8-3917] design dynamic_scan has port SEG[3] driven by constant 1
+WARNING: [Synth 8-3917] design dynamic_scan has port SEG[2] driven by constant 1
+WARNING: [Synth 8-3917] design dynamic_scan has port SEG[1] driven by constant 1
+WARNING: [Synth 8-3917] design dynamic_scan has port SEG[0] driven by constant 1
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1003.164 ; gain = 307.570
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1003.164 ; gain = 307.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1003.164 ; gain = 307.570
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1003.164 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc]
+WARNING: [Vivado 12-584] No ports matched 'SW[0]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[1]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[2]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[3]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[4]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[5]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[6]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[7]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[8]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[9]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[10]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[11]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[12]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[13]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[14]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[15]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED16_B'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED16_G'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED16_R'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED17_B'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED17_G'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED17_R'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CPU_RESETN'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTNC'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTNU'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTNL'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTNR'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTND'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[1]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:96]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:96]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[2]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:97]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[3]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:98]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[4]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[7]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:100]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:100]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[8]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:101]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:101]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[9]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:102]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:102]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[10]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JB[1]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JB[2]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JB[3]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:110]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:110]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JB[4]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:111]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:111]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JB[7]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:112]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:112]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JB[8]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:113]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JB[9]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:114]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:114]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JB[10]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:115]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:115]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JC[1]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:120]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:120]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JC[2]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:121]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:121]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JC[3]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:122]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:122]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JC[4]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:123]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:123]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JC[7]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:124]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:124]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JC[8]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:125]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:125]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JC[9]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:126]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:126]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JC[10]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:127]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:127]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JD[1]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:132]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:132]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JD[2]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:133]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:133]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JD[3]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:134]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:134]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JD[4]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:135]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:135]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JD[7]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:136]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:136]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JD[8]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:137]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:137]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JD[9]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:138]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:138]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JD[10]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:139]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:139]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'XA_N[1]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:144]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:144]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'XA_P[1]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:145]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:145]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'XA_N[2]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:146]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:146]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'XA_P[2]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:147]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:147]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'XA_N[3]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:148]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:148]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'XA_P[3]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:149]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:149]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'XA_N[4]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:150]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:150]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'XA_P[4]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:151]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:151]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_R[0]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:156]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:156]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_R[1]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:157]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:157]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_R[2]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:158]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:158]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_R[3]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:159]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:159]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_G[0]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:161]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:161]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_G[1]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:162]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:162]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_G[2]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:163]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:163]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_G[3]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:164]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:164]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_B[0]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:166]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:166]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_B[1]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:167]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:167]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_B[2]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:168]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:168]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_B[3]'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:169]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:169]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_HS'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:171]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:171]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_VS'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:172]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:172]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SD_RESET'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:177]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:177]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SD_CD'. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:178]
+INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:178]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:178]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/verilog/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/dynamic_scan_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/dynamic_scan_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1070.074 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1070.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1070.074 ; gain = 374.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1070.074 ; gain = 374.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1070.074 ; gain = 374.480
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "mem" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1070.074 ; gain = 374.480
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   9 Input      4 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module divider 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+Module rom8x4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   9 Input      4 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3917] design dynamic_scan has port SEG[7] driven by constant 1
+WARNING: [Synth 8-3917] design dynamic_scan has port SEG[6] driven by constant 1
+WARNING: [Synth 8-3917] design dynamic_scan has port SEG[5] driven by constant 1
+WARNING: [Synth 8-3917] design dynamic_scan has port SEG[4] driven by constant 1
+WARNING: [Synth 8-3917] design dynamic_scan has port SEG[3] driven by constant 1
+WARNING: [Synth 8-3917] design dynamic_scan has port SEG[2] driven by constant 1
+WARNING: [Synth 8-3917] design dynamic_scan has port SEG[1] driven by constant 1
+WARNING: [Synth 8-3917] design dynamic_scan has port SEG[0] driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1070.074 ; gain = 374.480
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1079.102 ; gain = 383.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1098.652 ; gain = 403.059
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1098.652 ; gain = 403.059
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1105.215 ; gain = 409.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1105.215 ; gain = 409.621
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1105.215 ; gain = 409.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1105.215 ; gain = 409.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1105.215 ; gain = 409.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1105.215 ; gain = 409.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     8|
+|3     |LUT1   |     2|
+|4     |LUT2   |     2|
+|5     |LUT3   |     9|
+|6     |LUT4   |     2|
+|7     |LUT6   |     8|
+|8     |FDRE   |    36|
+|9     |IBUF   |     1|
+|10    |OBUF   |    16|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------+--------+------+
+|      |Instance   |Module  |Cells |
++------+-----------+--------+------+
+|1     |top        |        |    85|
+|2     |  cnt_inst |counter |    14|
+|3     |  div_inst |divider |    53|
++------+-----------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1105.215 ; gain = 409.621
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1105.215 ; gain = 342.711
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1105.215 ; gain = 409.621
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1116.246 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1124.211 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+27 Infos, 116 Warnings, 100 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1124.211 ; gain = 737.586
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1124.211 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/verilog/verilog/project3_6/project3_6.runs/synth_1/dynamic_scan.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file dynamic_scan_utilization_synth.rpt -pb dynamic_scan_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  9 17:28:13 2025...
