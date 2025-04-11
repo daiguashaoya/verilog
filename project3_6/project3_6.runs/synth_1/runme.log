@@ -15,26 +15,27 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8784 
+INFO: Helper process launched with PID 8716 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 930.254 ; gain = 234.652
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 930.621 ; gain = 234.395
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'dynamic_scan' [D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:123]
-INFO: [Synth 8-6157] synthesizing module 'divider' [D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:34]
-	Parameter N bound to: 50000 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'divider' (1#1) [D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:34]
+INFO: [Synth 8-6157] synthesizing module 'dynamic_scan' [D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:128]
+INFO: [Synth 8-6157] synthesizing module 'divider' [D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:35]
+	Parameter SLOW_N bound to: 50000000 - type: integer 
+	Parameter FAST_N bound to: 50000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'divider' (1#1) [D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:35]
 INFO: [Synth 8-6157] synthesizing module 'counter' [D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:22]
 INFO: [Synth 8-6155] done synthesizing module 'counter' (2#1) [D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:22]
-INFO: [Synth 8-6157] synthesizing module 'rom8x4' [D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:57]
-INFO: [Synth 8-6155] done synthesizing module 'rom8x4' (3#1) [D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:57]
-INFO: [Synth 8-6157] synthesizing module '_7Seg_Driver_Decode' [D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:82]
-INFO: [Synth 8-226] default block is never used [D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:88]
-INFO: [Synth 8-6155] done synthesizing module '_7Seg_Driver_Decode' (4#1) [D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:82]
-INFO: [Synth 8-6157] synthesizing module '_7Seg_Driver_Selector' [D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:111]
-INFO: [Synth 8-6155] done synthesizing module '_7Seg_Driver_Selector' (5#1) [D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:111]
-INFO: [Synth 8-6155] done synthesizing module 'dynamic_scan' (6#1) [D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:123]
+INFO: [Synth 8-6157] synthesizing module 'rom8x4' [D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'rom8x4' (3#1) [D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:62]
+INFO: [Synth 8-6157] synthesizing module '_7Seg_Driver_Decode' [D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:87]
+INFO: [Synth 8-226] default block is never used [D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:93]
+INFO: [Synth 8-6155] done synthesizing module '_7Seg_Driver_Decode' (4#1) [D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:87]
+INFO: [Synth 8-6157] synthesizing module '_7Seg_Driver_Selector' [D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:116]
+INFO: [Synth 8-6155] done synthesizing module '_7Seg_Driver_Selector' (5#1) [D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:116]
+INFO: [Synth 8-6155] done synthesizing module 'dynamic_scan' (6#1) [D:/verilog/project3_6/project3_6.srcs/sources_1/new/expriment3_6.v:128]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1002.805 ; gain = 307.203
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1004.316 ; gain = 308.090
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -47,26 +48,17 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1002.805 ; gain = 307.203
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1004.316 ; gain = 308.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1002.805 ; gain = 307.203
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1004.316 ; gain = 308.090
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1002.805 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1004.316 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [D:/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc]
-WARNING: [Vivado 12-584] No ports matched 'SW[0]'. [D:/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:13]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:13]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SW[1]'. [D:/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:14]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:14]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SW[2]'. [D:/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:15]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:15]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'SW[3]'. [D:/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:16]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:16]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
@@ -356,38 +348,47 @@ WARNING: [Vivado 12-584] No ports matched 'SD_RESET'. [D:/verilog/project3_6/pro
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:177]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'SD_CD'. [D:/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:178]
-INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [D:/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:178]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:178]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SD_SCK'. [D:/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:179]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:179]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SD_CMD'. [D:/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:180]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:180]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SD_DAT[0]'. [D:/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:181]
+INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [D:/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:181]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc:181]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [D:/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/verilog/project3_6/project3_6.srcs/constrs_1/new/expriment3_6.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/dynamic_scan_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/dynamic_scan_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1092.469 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1073.332 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1092.469 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1073.332 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1092.469 ; gain = 396.867
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1073.332 ; gain = 377.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1092.469 ; gain = 396.867
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1073.332 ; gain = 377.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1092.469 ; gain = 396.867
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1073.332 ; gain = 377.105
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "mem" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1092.469 ; gain = 396.867
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1073.332 ; gain = 377.105
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -400,12 +401,16 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input     32 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
 	                3 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
+	   2 Input     26 Bit        Muxes := 1     
 	   9 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -413,16 +418,26 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
+Module dynamic_scan 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
 Module divider 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
 +---Registers : 
 	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     26 Bit        Muxes := 1     
 Module counter 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
 	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
 Module rom8x4 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -444,7 +459,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1092.469 ; gain = 396.867
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1073.332 ; gain = 377.105
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -456,13 +471,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1092.469 ; gain = 396.867
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1078.195 ; gain = 381.969
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1100.863 ; gain = 405.262
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1087.812 ; gain = 391.586
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -474,7 +489,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1100.863 ; gain = 405.262
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1088.348 ; gain = 392.121
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -498,13 +513,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1108.820 ; gain = 413.219
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1104.113 ; gain = 407.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1108.820 ; gain = 413.219
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1104.113 ; gain = 407.887
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -523,25 +538,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1108.820 ; gain = 413.219
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1104.113 ; gain = 407.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1108.820 ; gain = 413.219
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1104.113 ; gain = 407.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1108.820 ; gain = 413.219
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1104.113 ; gain = 407.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1108.820 ; gain = 413.219
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1104.113 ; gain = 407.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -558,14 +573,14 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |     8|
+|2     |CARRY4 |    12|
 |3     |LUT1   |     2|
-|4     |LUT2   |     2|
-|5     |LUT3   |    15|
-|6     |LUT4   |     2|
-|7     |LUT6   |     8|
+|4     |LUT2   |    10|
+|5     |LUT3   |    35|
+|6     |LUT4   |     1|
+|7     |LUT5   |     1|
 |8     |FDRE   |    36|
-|9     |IBUF   |     1|
+|9     |IBUF   |     4|
 |10    |OBUF   |    16|
 +------+-------+------+
 
@@ -573,34 +588,34 @@ Report Instance Areas:
 +------+--------------+--------------------+------+
 |      |Instance      |Module              |Cells |
 +------+--------------+--------------------+------+
-|1     |top           |                    |    91|
+|1     |top           |                    |   118|
 |2     |  cnt_inst    |counter             |    16|
-|3     |  div_inst    |divider             |    53|
+|3     |  div_inst    |divider             |    77|
 |4     |  seg_decoder |_7Seg_Driver_Decode |     4|
 +------+--------------+--------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1108.820 ; gain = 413.219
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1104.113 ; gain = 407.887
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 1108.820 ; gain = 323.555
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1108.820 ; gain = 413.219
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1104.113 ; gain = 338.871
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1104.113 ; gain = 407.887
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1120.895 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1115.219 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1120.895 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1123.156 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 27 Infos, 100 Warnings, 100 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1120.895 ; gain = 733.453
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1120.895 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1123.156 ; gain = 734.844
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1123.156 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/verilog/project3_6/project3_6.runs/synth_1/dynamic_scan.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file dynamic_scan_utilization_synth.rpt -pb dynamic_scan_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Apr  9 19:47:30 2025...
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 11 19:21:25 2025...

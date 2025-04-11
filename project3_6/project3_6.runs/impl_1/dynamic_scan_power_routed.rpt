@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Wed Apr  9 19:48:34 2025
-| Host             : VOIPC71 running 64-bit major release  (build 9200)
+| Date             : Fri Apr 11 19:22:53 2025
+| Host             : VOIPC63 running 64-bit major release  (build 9200)
 | Command          : report_power -file dynamic_scan_power_routed.rpt -pb dynamic_scan_power_summary_routed.pb -rpx dynamic_scan_power_routed.rpx
 | Design           : dynamic_scan
 | Device           : xc7a100tcsg324-1
@@ -53,13 +53,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |       78 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       20 |     63400 |            0.03 |
-|   CARRY4       |    <0.001 |        8 |     15850 |            0.05 |
+| Slice Logic    |    <0.001 |      102 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       27 |     63400 |            0.04 |
+|   CARRY4       |    <0.001 |       12 |     15850 |            0.08 |
 |   Register     |    <0.001 |       36 |    126800 |            0.03 |
 |   Others       |     0.000 |        5 |       --- |             --- |
-| Signals        |    <0.001 |       69 |       --- |             --- |
-| I/O            |     0.027 |       17 |       210 |            8.10 |
+| Signals        |    <0.001 |       64 |       --- |             --- |
+| I/O            |     0.027 |       20 |       210 |            9.52 |
 | Static Power   |     0.097 |          |           |                 |
 | Total          |     0.126 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
@@ -95,7 +95,7 @@ Table of Contents
 +-----------------------------+------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 | Design implementation state | High       | Design is routed                                      |                                                                                                                    |
 | Clock nodes activity        | Medium     | More than 5% of clocks are missing user specification | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
-| I/O nodes activity          | High       | User specified more than 95% of inputs                |                                                                                                                    |
+| I/O nodes activity          | Medium     | More than 5% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
 | Internal nodes activity     | Medium     | User specified less than 25% of internal nodes        | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
 | Device models               | High       | Device models are Production                          |                                                                                                                    |
 |                             |            |                                                       |                                                                                                                    |

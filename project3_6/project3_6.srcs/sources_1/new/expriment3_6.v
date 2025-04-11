@@ -20,23 +20,28 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module counter(
+    input dir,
     input clk,          // 时钟输入（上升沿触发）
     output reg [2:0] out // 3位计数输出（必须声明为reg类型）
 );
 
 // 时序逻辑块
 always @(posedge clk) begin
-    out <= out + 1;     // 每个时钟周期加1（自动溢出）
+        out <= dir ? out + 1 : out - 1; // 方向控制
 end
 
 endmodule
 
 module divider(
     input clk,          // 系统时钟（100MHz）
+    input speed_mode,
     output reg clk_N    // 分频后时钟
 );
-    parameter N = 100_000_000;  // 默认1Hz分频（100MHz / 100,000,000）
+    parameter SLOW_N = 50_000_000; // 参数化
+    parameter FAST_N = 50_000;
+    
     reg [31:0] counter;
+    wire [31:0] N = speed_mode ? FAST_N : SLOW_N;
 
     always @(posedge clk) begin
         if (counter >= (N/2 - 1)) begin  // 计数达到N/2时翻转
@@ -115,15 +120,16 @@ module _7Seg_Driver_Selector(
 
 always @(*) begin
     // 优化后的片选逻辑
-    AN = ~(8'b00000001 << SW);  // 等价于原式 8'b11111111 - (8'b00000001 << SW)
+    AN = ~(8'b00000001 << SW);   
 end
 
 endmodule
 
 module dynamic_scan(
     input clk,           // 100MHz系统时钟
+    input [2:0] SW,
     output [7:0] SEG,    // 七段数码管段选信号（CA-CG + DP）
-    output [7:0] AN      // 八位数码管位选信号（低电平有效）
+    output [7:0] AN     // 八位数码管位选信号（低电平有效）
 );
 
 // 内部信号声明
@@ -132,16 +138,24 @@ wire [2:0] addr;        // 地址计数器输出
 wire [3:0] rom_data;    // ROM输出数据
 wire [7:0] seg_decoded; // 七段译码结果
 
-// 分频模块实例化（扫描频率控制）
+// 方向控制逻辑（优先级：左 > 右）
+wire direction = SW[2] ? 1'b1 : 
+                SW[0] ? 1'b0 : 
+                1'b1;   // 默认左移
+
+// 分频器正确实例化
 divider #(
-    .N(50_000)          // 分频参数（100MHz/50000/2 = 1kHz扫描频率）
+    .SLOW_N(50_000_000),  // 明确参数传递
+    .FAST_N(50_000)
 ) div_inst (
     .clk(clk),
+    .speed_mode(SW[1]),
     .clk_N(clk_scan)
 );
 
 // 计数器模块实例化（地址生成）
 counter cnt_inst (
+    .dir(direction),
     .clk(clk_scan),     // 使用分频后的扫描时钟
     .out(addr)          // 生成0-7循环地址
 );
@@ -158,13 +172,13 @@ _7Seg_Driver_Decode seg_decoder (
     .SEG(seg_decoded)   // 输出段码
 );
 
-// 数码管选择模块实例化（3-8译码器）
+// 数码管选择模块实例化
 _7Seg_Driver_Selector selector (
     .SW(addr),          // 输入当前地址
     .AN(AN)             // 输出位选信号
 );
 
-// 最终段码输出（DP点默认关闭）
+// 最终段码输出
 assign SEG = seg_decoded;
 
 endmodule
