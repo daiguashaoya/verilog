@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Apr 18 21:43:04 2025
+# Process ID: 3200
+# Current directory: D:/verilog/project4/project4.runs/synth_1
+# Command line: vivado.exe -log datapath.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source datapath.tcl
+# Log file: D:/verilog/project4/project4.runs/synth_1/datapath.vds
+# Journal file: D:/verilog/project4/project4.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source datapath.tcl -notrace

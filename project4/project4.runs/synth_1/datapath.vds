@@ -1,0 +1,340 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Apr 18 21:43:04 2025
+# Process ID: 3200
+# Current directory: D:/verilog/project4/project4.runs/synth_1
+# Command line: vivado.exe -log datapath.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source datapath.tcl
+# Log file: D:/verilog/project4/project4.runs/synth_1/datapath.vds
+# Journal file: D:/verilog/project4/project4.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source datapath.tcl -notrace
+Command: synth_design -top datapath -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9100 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 930.828 ; gain = 234.160
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'datapath' [D:/verilog/project4/project4.srcs/sources_1/new/project4.v:70]
+	Parameter n bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'full_adder' [D:/verilog/project4/project4.srcs/sources_1/new/project4.v:2]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'full_adder' (1#1) [D:/verilog/project4/project4.srcs/sources_1/new/project4.v:2]
+INFO: [Synth 8-6157] synthesizing module 'mux_21' [D:/verilog/project4/project4.srcs/sources_1/new/project4.v:25]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_21' (2#1) [D:/verilog/project4/project4.srcs/sources_1/new/project4.v:25]
+INFO: [Synth 8-6157] synthesizing module 'ram' [D:/verilog/project4/project4.srcs/sources_1/new/project4.v:37]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ram' (3#1) [D:/verilog/project4/project4.srcs/sources_1/new/project4.v:37]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [D:/verilog/project4/project4.srcs/sources_1/new/project4.v:123]
+INFO: [Synth 8-6157] synthesizing module 'register' [D:/verilog/project4/project4.srcs/sources_1/new/project4.v:58]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register' (4#1) [D:/verilog/project4/project4.srcs/sources_1/new/project4.v:58]
+INFO: [Synth 8-6157] synthesizing module 'comparator' [D:/verilog/project4/project4.srcs/sources_1/new/project4.v:13]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'comparator' (5#1) [D:/verilog/project4/project4.srcs/sources_1/new/project4.v:13]
+WARNING: [Synth 8-7023] instance 'zero_compare' of module 'comparator' has 5 connections declared, but only 3 given [D:/verilog/project4/project4.srcs/sources_1/new/project4.v:175]
+WARNING: [Synth 8-693] zero replication count - replication ignored [D:/verilog/project4/project4.srcs/sources_1/new/project4.v:181]
+WARNING: [Synth 8-3848] Net mem_next_addr in module/entity datapath does not have driver. [D:/verilog/project4/project4.srcs/sources_1/new/project4.v:88]
+WARNING: [Synth 8-3848] Net mem_node_data in module/entity datapath does not have driver. [D:/verilog/project4/project4.srcs/sources_1/new/project4.v:88]
+INFO: [Synth 8-6155] done synthesizing module 'datapath' (6#1) [D:/verilog/project4/project4.srcs/sources_1/new/project4.v:70]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1003.590 ; gain = 306.922
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1003.590 ; gain = 306.922
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1003.590 ; gain = 306.922
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1003.590 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/verilog/project4/project4.srcs/constrs_1/new/project4.xdc]
+Finished Parsing XDC File [D:/verilog/project4/project4.srcs/constrs_1/new/project4.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1088.070 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1092.484 ; gain = 4.414
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1092.484 ; gain = 395.816
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1092.484 ; gain = 395.816
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1092.484 ; gain = 395.816
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1092.484 ; gain = 395.816
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 3     
++---RAMs : 
+	               8K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module full_adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 1     
+Module mux_21 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---RAMs : 
+	               8K Bit         RAMs := 1     
+Module register 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-6014] Unused sequential element memory/ram_reg was removed. 
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[31]' (FDRE) to 'NEXT_reg/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[30]' (FDRE) to 'NEXT_reg/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[28]' (FDRE) to 'NEXT_reg/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[29]' (FDRE) to 'NEXT_reg/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[24]' (FDRE) to 'NEXT_reg/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[25]' (FDRE) to 'NEXT_reg/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[26]' (FDRE) to 'NEXT_reg/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[27]' (FDRE) to 'NEXT_reg/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[18]' (FDRE) to 'NEXT_reg/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[19]' (FDRE) to 'NEXT_reg/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[16]' (FDRE) to 'NEXT_reg/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[17]' (FDRE) to 'NEXT_reg/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[22]' (FDRE) to 'NEXT_reg/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[23]' (FDRE) to 'NEXT_reg/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[20]' (FDRE) to 'NEXT_reg/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[21]' (FDRE) to 'NEXT_reg/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[6]' (FDRE) to 'NEXT_reg/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[7]' (FDRE) to 'NEXT_reg/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[4]' (FDRE) to 'NEXT_reg/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[5]' (FDRE) to 'NEXT_reg/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[0]' (FDRE) to 'NEXT_reg/Q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[1]' (FDRE) to 'NEXT_reg/Q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[2]' (FDRE) to 'NEXT_reg/Q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[3]' (FDRE) to 'NEXT_reg/Q_reg[8]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[14]' (FDRE) to 'NEXT_reg/Q_reg[8]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[15]' (FDRE) to 'NEXT_reg/Q_reg[8]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[12]' (FDRE) to 'NEXT_reg/Q_reg[8]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[13]' (FDRE) to 'NEXT_reg/Q_reg[8]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[8]' (FDRE) to 'NEXT_reg/Q_reg[9]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[9]' (FDRE) to 'NEXT_reg/Q_reg[10]'
+INFO: [Synth 8-3886] merging instance 'NEXT_reg/Q_reg[10]' (FDRE) to 'NEXT_reg/Q_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\NEXT_reg/Q_reg[11] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1092.484 ; gain = 395.816
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1092.484 ; gain = 395.816
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1092.484 ; gain = 395.816
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1092.484 ; gain = 395.816
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1093.324 ; gain = 396.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1093.324 ; gain = 396.656
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1093.324 ; gain = 396.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1093.324 ; gain = 396.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1093.324 ; gain = 396.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1093.324 ; gain = 396.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |OBUF |    33|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    33|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1093.324 ; gain = 396.656
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1093.324 ; gain = 307.762
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1093.324 ; gain = 396.656
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1104.164 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1115.391 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+53 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1115.391 ; gain = 727.750
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1115.391 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/verilog/project4/project4.runs/synth_1/datapath.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file datapath_utilization_synth.rpt -pb datapath_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 18 21:43:34 2025...
